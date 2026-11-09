@@ -1,0 +1,21 @@
+{
+  "name": "backend-jobs",
+  "signal_type": "вакансія backend висить понад 60 днів",
+  "min_age_days": 60,
+  "window_days": 90,
+  "must_words": ["backend", "python", "tech lead"],
+  "stop_words": ["recruitment agency", "staffing", "кадрове агентство"],
+  "source": {
+    "type": "apify",
+    "actor": "<actor-id з Apify Store, наприклад скрейпер LinkedIn Jobs>",
+    "input": {"keywords": "Senior Backend Engineer", "location": "United States", "maxItems": 200}
+  },
+  "fields": {
+    "object_id": "jobUrl",
+    "url": "jobUrl",
+    "domain": "companyWebsite",
+    "title": "title",
+    "date": "postedAt",
+    "text": "description"
+  }
+}
