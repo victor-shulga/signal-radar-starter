@@ -1,0 +1,162 @@
+{
+  "_": "Комент-радар. Поля з «___» заповніть самі. Приклад нижче підібраний під агенцію, що продає розробку продуктовим компаніям: замініть групи, ринки й запити на свій ICP.",
+  "author": {
+    "name": "___ ваше ім'я",
+    "profile_url": "___ https://www.linkedin.com/in/..."
+  },
+  "competitors": [
+    {
+      "company": "___ назва студії",
+      "name": "___ ім'я, роль",
+      "profile_url": "___ https://www.linkedin.com/in/... людина, яка пише хоча б двічі на місяць"
+    }
+  ],
+  "voice": {
+    "tone": [
+      "старший інженер, який говорить фактами",
+      "спокійно й прямо",
+      "зі строками, обсягами й назвами інструментів"
+    ],
+    "never": [
+      "реклама компанії, посилання, запрошення в особисті",
+      "«great post» і будь-які його варіації",
+      "назви клієнтів, навіть якщо проєкт публічний",
+      "обіцянки ROI чи MRR",
+      "хештеги, більше одного смайлика"
+    ],
+    "proof_numbers": [
+      "___ 5-8 реальних чисел вашої компанії, які можна назвати вголос. Інших чисел система не напише."
+    ]
+  },
+  "markets": {
+    "_": "Країни покупця. Групи icp і peers проходять лише з цими країнами, лідери думок звідусіль.",
+    "country_codes": [
+      "US",
+      "GB"
+    ],
+    "names": [
+      "United States",
+      "USA",
+      "New York",
+      "San Francisco",
+      "Boston",
+      "United Kingdom",
+      "England",
+      "London"
+    ]
+  },
+  "groups": {
+    "_": "Ключові слова шукаються в заголовку профілю, посаді й компанії (регулярні вирази, регістр не важливий).",
+    "exclude": {
+      "keywords": [
+        "recruit",
+        "talent acquisition",
+        "headhunt",
+        "\\bhr\\b",
+        "\\bstudent\\b",
+        "open to work",
+        "looking for (a )?new (role|opportunit)"
+      ]
+    },
+    "icp": {
+      "title": "🎯 Покупці",
+      "job": "показати, що розумієте щоденний біль покупця: продукт, що буксує, команда, яка не встигає, розмови з керівництвом про строки. Нуль пропозицій",
+      "keywords": [
+        "\\bcto\\b",
+        "vp (of )?engineering",
+        "head of (engineering|ai|ml|data)",
+        "(founder|ceo).{0,60}(saas|startup|platform|app)",
+        "\\bcpo\\b",
+        "head of product"
+      ]
+    },
+    "copilots": {
+      "title": "🧩 Суміжні",
+      "job": "знайти стик: де їхня послуга закінчується і починається розробка продукту",
+      "keywords": [
+        "fractional (cfo|cmo|coo|cpo)",
+        "compliance (consult|advis)",
+        "(ai|tech|product) (consult|advis)",
+        "\\baccelerator\\b",
+        "venture (partner|capital)",
+        "\\bvc\\b",
+        "angel investor",
+        "product (consultant|coach)"
+      ]
+    },
+    "peers": {
+      "title": "🤝 Колеги по ринку",
+      "job": "розмова рівних: свій погляд на доставку й команди, свої строки, стримана незгода доречна",
+      "keywords": [
+        "(software|product|custom) (development|engineering) (company|agency|studio|partner|services)",
+        "outsourc",
+        "\\boutstaff",
+        "nearshore",
+        "dev(elopment)? shop",
+        "fractional cto"
+      ]
+    },
+    "tl": {
+      "title": "📣 Лідери думок",
+      "job": "досвід із реальних проєктів проти загального твердження про продукт, інженерію чи фінтех",
+      "rule": "у групу потрапляє той, у кого медіана від 25 реакцій на останніх дописах (check_activity.py перепризначає сам)",
+      "keywords": [
+        "speaker",
+        "podcast",
+        "author of",
+        "keynote",
+        "columnist",
+        "newsletter"
+      ]
+    }
+  },
+  "topics": {
+    "_": "Пошук дописів за темами по всьому LinkedIn. Лише англійські запити, до 5 логічних операторів в одному. Це стартовий набір, правте після першого тижня.",
+    "enabled": true,
+    "posted_limit": "week",
+    "pages_per_query": 2,
+    "max_profile_checks": 40,
+    "queries": [
+      "\"computer vision\" AND (startup OR product)",
+      "\"machine learning\" AND hiring AND (CTO OR founder)",
+      "\"AI feature\" AND (roadmap OR launch)",
+      "\"edge AI\" AND (device OR product)",
+      "\"hiring ML engineer\" OR \"hiring machine learning\"",
+      "\"proof of concept\" AND AI AND (startup OR product)"
+    ]
+  },
+  "twenty": {
+    "_": "Звідки брати клієнтів і лідів. Поле статусу й значення як у вашому Twenty (Settings → Data model → Companies). Ключ зберігається окремо: bash scripts/save_key.sh twenty.",
+    "base_url": "___ https://ВАШ-ВОРКСПЕЙС.twenty.com",
+    "company_status_field": "___ назва поля статусу компанії",
+    "statuses": {
+      "клієнт": [
+        "___ значення «Клієнт»"
+      ],
+      "колишній клієнт": [
+        "___ значення «Колишній клієнт»"
+      ],
+      "лід": [
+        "___ значення «Лід»",
+        "___ «SAL»",
+        "___ «Дискавері»",
+        "___ «Пропозиція»"
+      ]
+    }
+  },
+  "daily": {
+    "time": "10:00 за Києвом, будні (08:00 Лондон, 09:00 Цюрих)",
+    "max_profiles": 400,
+    "rotation_reserved": 150,
+    "engagers_top": 15,
+    "window_hours": 40,
+    "skip_days": 7,
+    "max_drafts": 25,
+    "max_usd": 0.9
+  },
+  "once": {
+    "engagers_days": 30,
+    "engagers_max_usd": 5,
+    "activity_max_usd": 4
+  }
+}

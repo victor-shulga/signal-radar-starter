@@ -1,0 +1,16 @@
+name = "comment-radar"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+# Only your own domain behind Cloudflare Access: the *.workers.dev address would bypass the login.
+workers_dev = false
+preview_urls = false
+
+[vars]
+# From Zero Trust → Access → Applications → your app: team domain and "Application Audience (AUD) Tag".
+ACCESS_TEAM_DOMAIN = "___team-name.cloudflareaccess.com"
+ACCESS_AUD = "___aud-tag"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "comment-radar"
+database_id = "___database-id"
